@@ -1,37 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DriveLearn – Traffic Awareness</title>
+<title>حاسبة مواد البناء</title>
 
 <style>
 :root {
-  --primary:#10b981;
-  --primary-dark:#047857;
-  --bg-light:#f8fafc;
-  --bg-dark:#0f172a;
-  --card-light:#ffffff;
-  --card-dark:#111827;
-  --text-dark:#0f172a;
-  --text-light:#e5e7eb;
-  --radius:18px;
+  --primary: #10b981; /* أخضر */
+  --primary-dark: #047857;
+  --bg-light: #f8fafc;
+  --bg-dark: #0f172a;
+  --card-light: #ffffff;
+  --card-dark: #111827;
+  --text-dark: #0f172a;
+  --text-light: #e5e7eb;
+  --radius: 18px;
 }
 
-*{box-sizing:border-box}
-
+*{box-sizing:border-box;}
 body{
   margin:0;
-  font-family:"Segoe UI",system-ui,sans-serif;
+  font-family:"Segoe UI",sans-serif;
   background:var(--bg-light);
   color:var(--text-dark);
 }
-
-body.dark{
-  background:var(--bg-dark);
-  color:var(--text-light);
-}
-
+body.dark{background:var(--bg-dark);color:var(--text-light);}
 a{text-decoration:none;color:inherit}
 .rtl{direction:rtl;text-align:right}
 
@@ -39,27 +33,20 @@ a{text-decoration:none;color:inherit}
 .navbar{
   height:60px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
   padding:0 20px;
   background:var(--card-light);
   box-shadow:0 6px 16px rgba(0,0,0,.06);
 }
-
-body.dark .navbar{background:var(--card-dark)}
-
+body.dark .navbar{background:var(--card-dark);}
 .navbar .links a{
   margin-left:18px;
   font-weight:600;
   color:var(--primary);
 }
-
-.lang-switch{
-  cursor:pointer;
-  font-weight:700;
-}
-
-.logo{height:34px}
+.logo{font-weight:700;font-size:20px;}
+.lang-switch{cursor:pointer;font-weight:700;}
 
 /* HERO */
 .hero{
@@ -68,54 +55,18 @@ body.dark .navbar{background:var(--card-dark)}
   background:linear-gradient(135deg,var(--primary),var(--primary-dark));
   color:#fff;
 }
-
-.hero h1{
-  font-size:38px;
-  margin-bottom:14px;
-}
-
-.hero p{
-  font-size:18px;
-  max-width:720px;
-  margin:auto;
-  opacity:.95;
-}
-
-.hero .actions{margin-top:34px}
-
-.btn{
-  display:inline-block;
-  margin:10px;
-  padding:14px 34px;
-  border-radius:999px;
-  font-weight:700;
-  transition:.25s;
-}
-
-.btn-primary{background:#fff;color:var(--primary)}
-.btn-outline{border:2px solid #fff;color:#fff}
-
-.btn:hover{transform:translateY(-2px);opacity:.95}
+.hero h1{font-size:36px;margin-bottom:12px;}
+.hero p{font-size:18px;max-width:720px;margin:auto;opacity:.95;}
+.hero .actions{margin-top:30px;}
+.btn{display:inline-block;margin:8px;padding:14px 34px;border-radius:999px;font-weight:700;transition:.25s;}
+.btn-primary{background:#fff;color:var(--primary);}
+.btn-outline{border:2px solid #fff;color:#fff;}
+.btn:hover{transform:translateY(-2px);opacity:.95;}
 
 /* CONTENT */
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:0 20px;
-}
-
-.section-title{
-  text-align:center;
-  margin:80px 0 20px;
-  font-size:28px;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:26px;
-}
-
+.container{max-width:1100px;margin:auto;padding:0 20px;}
+.section-title{text-align:center;margin:60px 0 20px;font-size:28px;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;}
 .card{
   background:var(--card-light);
   padding:30px;
@@ -124,105 +75,105 @@ body.dark .navbar{background:var(--card-dark)}
   box-shadow:0 12px 28px rgba(0,0,0,.08);
   transition:.25s;
 }
+body.dark .card{background:var(--card-dark);}
+.card:hover{transform:translateY(-6px);}
+.card a{display:inline-block;margin-top:14px;font-weight:600;color:var(--primary);}
 
-body.dark .card{background:var(--card-dark)}
-.card:hover{transform:translateY(-6px)}
+/* FOOTER */
+footer{margin-top:80px;padding:30px;text-align:center;font-size:14px;opacity:.8;}
 
-.card a{
-  display:inline-block;
-  margin-top:14px;
-  font-weight:600;
-  color:var(--primary);
-}
-
-footer{
-  margin-top:90px;
-  padding:30px;
-  text-align:center;
-  font-size:14px;
-  opacity:.8;
-}
+/* MOBILE */
+@media(max-width:600px){.hero h1{font-size:28px}.hero p{font-size:16px}}
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
-  <div class="logo">DriveLearn</div>
+  <div class="logo">حاسبة البناء</div>
   <div class="links">
-    <a href="login.html">Login</a>
-    <a href="register.html">Register</a>
-    <span class="lang-switch" onclick="toggleLanguage()">AR</span>
+    <a href="login.html">تسجيل الدخول</a>
+    <a href="register.html">إنشاء حساب</a>
+    <span class="lang-switch" onclick="toggleLanguage()">EN</span>
   </div>
 </div>
 
+<!-- HERO -->
 <section class="hero">
-  <h1 id="heroTitle">Learn Driving the Smart Way</h1>
-  <p id="heroSub">Master traffic signs and prepare confidently for your exam.</p>
-
+  <h1 id="heroTitle">احسب مواد البناء بسهولة</h1>
+  <p id="heroSub">منصة لمساعدة البنّائين والمهندسين على تقدير كميات مواد البناء بدقة</p>
   <div class="actions">
-    <a href="register.html" class="btn btn-primary">Create Account</a>
-    <a href="login.html" class="btn btn-outline">Login</a>
+    <a href="register.html" class="btn btn-primary">إنشاء حساب</a>
+    <a href="login.html" class="btn btn-outline">تسجيل الدخول</a>
   </div>
 </section>
 
+<!-- SECTIONS -->
 <div class="container">
-  <h2 class="section-title" id="pathTitle">Learning Sections</h2>
-
+  <h2 class="section-title" id="pathTitle">الأدوات</h2>
   <div class="cards">
     <div class="card">
-      <h3 id="c1">🚦 Traffic Signs</h3>
-      <p id="d1">Learn all road signs easily.</p>
+      <h3 id="c1">🧱 الطوب / البلوك</h3>
+      <p id="d1">احسب عدد الطوب أو البلوك اللازم للبناء</p>
+      <a href="brick.html">ابدأ الحساب</a>
     </div>
-
     <div class="card">
-      <h3 id="c2">📝 Quizzes</h3>
-      <p id="d2">Test your knowledge.</p>
+      <h3 id="c2">🪨 الخرسانة</h3>
+      <p id="d2">احسب كمية الإسمنت والرمل والحصى لكل البلاطات</p>
+      <a href="concrete.html">ابدأ الحساب</a>
     </div>
-
     <div class="card">
-      <h3 id="c3">👤 Account</h3>
-      <p id="d3">Save your progress.</p>
+      <h3 id="c3">🛠️ الحديد</h3>
+      <p id="d3">تقدير كمية الحديد للأعمدة والأساسات</p>
+      <a href="iron.html">ابدأ الحساب</a>
+    </div>
+    <div class="card">
+      <h3 id="c4">🎨 الدهان</h3>
+      <p id="d4">احسب كمية الدهان حسب مساحة الجدران وعدد الطبقات</p>
+      <a href="paint.html">ابدأ الحساب</a>
     </div>
   </div>
 </div>
 
-<footer id="footer">© 2026 DriveLearn</footer>
+<!-- FOOTER -->
+<footer id="footer">© 2026 حاسبة مواد البناء</footer>
 
 <script>
-const savedLang = localStorage.getItem("lang");
-const savedTheme = localStorage.getItem("theme");
+let ar=false;
 
-if(savedTheme==="dark") document.body.classList.add("dark");
-if(savedLang==="ar") setArabic();
+// حفظ اللغة في localStorage
+if(localStorage.getItem("lang")==="en") ar=false;
+if(localStorage.getItem("lang")==="ar") ar=true;
+
+if(ar) setArabic();
 
 function toggleLanguage(){
-  if(localStorage.getItem("lang")==="ar"){
-    localStorage.setItem("lang","en");
-    location.reload();
-  }else{
-    setArabic();
-    localStorage.setItem("lang","ar");
-  }
+  ar=!ar;
+  localStorage.setItem("lang", ar?"ar":"en");
+  if(ar) setArabic();
+  else location.reload();
 }
 
 function setArabic(){
   document.body.classList.add("rtl");
-  heroTitle.innerText="تعلّم السياقة بذكاء";
-  heroSub.innerText="منصة لتعلّم إشارات المرور والتحضير للامتحان";
-  pathTitle.innerText="أقسام التعلم";
-  c1.innerText="🚦 إشارات المرور";
-  d1.innerText="تعلّم جميع إشارات الطريق";
-  c2.innerText="📝 اختبارات";
-  d2.innerText="اختبر معلوماتك";
-  c3.innerText="👤 الحساب";
-  d3.innerText="احفظ تقدمك";
-  footer.innerText="© 2026 DriveLearn – منصة تعليم السياقة";
+  heroTitle.innerText="Build Materials Calculator";
+  heroSub.innerText="Platform to help builders & engineers estimate materials";
+  pathTitle.innerText="Tools";
+  c1.innerText="🧱 Bricks / Blocks";
+  d1.innerText="Calculate required bricks or blocks";
+  c2.innerText="🪨 Concrete";
+  d2.innerText="Calculate cement, sand & gravel";
+  c3.innerText="🛠️ Iron";
+  d3.innerText="Estimate iron for columns & foundations";
+  c4.innerText="🎨 Paint";
+  d4.innerText="Calculate paint based on wall area & layers";
+  footer.innerText="© 2026 Build Materials Calculator";
 }
 
+// الوضع الليلي حسب إعداد الجهاز
 if(window.matchMedia("(prefers-color-scheme: dark)").matches){
   document.body.classList.add("dark");
-  localStorage.setItem("theme","dark");
 }
 </script>
 
